@@ -1,0 +1,116 @@
+
+<!-- <div class="container">
+<form [formGroup]="addCustomerForm">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" formControlName="name" id="name" placeholder="name">
+      </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="email" formControlName="email" id="exampleInputEmail1" placeholder="Enter email">
+      
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" class="form-control" name="phone" formControlName="phone" id="phone" placeholder="phone">
+      </div>
+    
+    
+    <button type="submit" class="btn btn-primary m-2" (click)="addCustomer()">Add Customer</button>
+    <button class="btn btn-warning" routerLink="/customers">View Customers</button>
+  </form>
+</div> -->
+
+
+
+<div class="formbold-main-wrapper">
+  <div class="w-full">
+    <div class="formbold-form-wrapper" [ngClass]="{'active': isFormActive}">
+      <div class="formbold-form-header">
+        <h3>Let's add customer? - Online</h3>
+        <button (click)="chatboxToggleHandler()">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="white">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.474874 0.474874C1.10804 -0.158291 2.1346 -0.158291 2.76777 0.474874L16.5251 14.2322C17.1583 14.8654 17.1583 15.892 16.5251 16.5251C15.892 17.1583 14.8654 17.1583 14.2322 16.5251L0.474874 2.76777C-0.158291 2.1346 -0.158291 1.10804 0.474874 0.474874Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.474874 16.5251C-0.158291 15.892 -0.158291 14.8654 0.474874 14.2322L14.2322 0.474874C14.8654 -0.158292 15.892 -0.158291 16.5251 0.474874C17.1583 1.10804 17.1583 2.1346 16.5251 2.76777L2.76777 16.5251C2.1346 17.1583 1.10804 17.1583 0.474874 16.5251Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <form [formGroup]="addCustomerForm" (ngSubmit)="onSubmit()" class="formbold-chatbox-form">
+        <div class="formbold-mb-5">
+          <label for="name" class="formbold-form-label">Your Name</label>
+          <input
+            type="text"
+            formControlName="name"
+            id="name"
+            placeholder="Your Name"
+            class="formbold-form-input"
+          />
+        </div>
+
+        <div class="formbold-mb-5">
+          <label for="email" class="formbold-form-label">Email Address</label>
+          <input
+            type="email"
+            formControlName="email"
+            id="email"
+            placeholder="example@domain.com"
+            class="formbold-form-input"
+          />
+        </div>
+
+        <div class="formbold-mb-5">
+          <label for="phone" class="formbold-form-label">Phone</label>
+          <input
+            type="tel"
+            formControlName="phone"
+            id="phone"
+            placeholder="93xxxxxxxx"
+            class="formbold-form-input"
+          />
+        </div>
+
+        <div>
+          <button class="formbold-btn w-full" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="formbold-action-buttons">
+      <button class="formbold-action-btn" (click)="chatboxToggleHandler()">
+        <span class="formbold-cross-icon" *ngIf="isFormActive">
+          <svg
+          width="17" height="17" viewBox="0 0 17 17" fill="white"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.474874 0.474874C1.10804 -0.158291 2.1346 -0.158291 2.76777 0.474874L16.5251 14.2322C17.1583 14.8654 17.1583 15.892 16.5251 16.5251C15.892 17.1583 14.8654 17.1583 14.2322 16.5251L0.474874 2.76777C-0.158291 2.1346 -0.158291 1.10804 0.474874 0.474874Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.474874 16.5251C-0.158291 15.892 -0.158291 14.8654 0.474874 14.2322L14.2322 0.474874C14.8654 -0.158292 15.892 -0.158291 16.5251 0.474874C17.1583 1.10804 17.1583 2.1346 16.5251 2.76777L2.76777 16.5251C2.1346 17.1583 1.10804 17.1583 0.474874 16.5251Z"
+              fill="white"
+            />
+          </svg>
+        </span>
+        <span class="formbold-chat-icon" *ngIf="!isFormActive">
+          <svg width="20" height="20" viewBox="0 0 17 17" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5 0.5V16.5" stroke="white" stroke-linecap="round"/>
+            <path d="M0.5 8.5H16.5" stroke="white" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+

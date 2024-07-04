@@ -1,0 +1,72 @@
+<button class="btn btn-warning" routerLink="/add">Add New Customer</button>
+<!-- <table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col"><Noscript></Noscript></th>
+			<th scope="col">Name</th>
+			<th scope="col">Email</th>
+			<th scope="col">Phone</th>
+            <th >Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		 
+			<tr *ngFor="let customer of customersList;let i = index">
+				<th scope="row">{{ i + 1 }}</th>
+                <td>{{ customer.name}}</td>
+				<td>{{ customer.email}}</td>
+				<td>{{ customer.phone}}</td>
+                <td>
+					<button class="btn btn-warning m-3" routerLink="/get/{{customer.id}}">Update</button>
+                    <button class="btn btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+                </td>
+			</tr>
+			
+		
+	</tbody>
+	
+</table> -->
+
+
+<!-- customer-component.html -->
+
+<h2 class="text-center text-primary">Customer List</h2>
+<div class="limiter">
+	<div class="container-table100">
+	  <div class="wrap-table100">
+		<div class="table100">
+		  <table>
+			<thead>
+			  <tr class="table100-head">
+			<th scope="col">No</th>
+			<th scope="col">Name</th>
+			<th scope="col">Email</th>
+			<th scope="col">Phone</th>
+            <th >Action</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <!-- Replace this section with Angular *ngFor directive -->
+			  <tr *ngFor="let customer of customersList;let i = index">
+				<th scope="row">{{ i + 1 }}</th>
+                <td>{{ customer.name}}</td>
+				<td>{{ customer.email}}</td>
+				<td>{{ customer.phone}}</td>
+				<td>
+				  <button class="btn btn-warning m-3" routerLink="/get/{{customer.id}}">Update</button>
+				  <button class="btn btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+				</td>
+			  </tr>
+			  <!-- End of *ngFor directive -->
+  
+			</tbody>
+		  </table>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  <!-- End of customer-component.html -->
+  
+
+

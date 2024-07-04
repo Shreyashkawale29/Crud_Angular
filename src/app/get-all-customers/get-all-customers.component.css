@@ -1,0 +1,116 @@
+/* customer-component.css */
+
+/* Base styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-table100 {
+    width: 100%;
+    min-height: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.wrap-table100 {
+    width: auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Table styles */
+.table100 {
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table100-head {
+    background-color: dodgerblue;
+}
+
+.table100-head th {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.4;
+    text-transform: uppercase;
+    padding: 12px;
+}
+
+tbody tr {
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.4;
+    background-color: #f3f3f3;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+tbody tr th, tbody tr td {
+    padding: 12px;
+    text-align: left;
+}
+
+.column1 {
+    width: 20%;
+}
+
+.column2, .column3 {
+    width: 60%;
+}
+.column4{
+    width: 20%;
+}
+
+
+
+/* Button styles */
+.btn {
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-warning {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Margin adjustments for buttons */
+.m-3 {
+    margin: 3px;
+}
